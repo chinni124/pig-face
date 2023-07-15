@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(115, 118, 120);
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    width: 400px;
+    height:400px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    border:10px solid black
+   
+}
+
+.eyes-container , .nose-container{
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top:140px;
+left:50%;
+transform: translateX(-50%);
+gap:20px;
+}
+
+.eye{
+    width:90px;
+    height:90px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    border:10px solid black;
+}
+
+.eye-iris{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+.eye:nth-child(1) > .eye-iris{
+   bottom:20px;
+   right:10px;
+}
+.eye:nth-child(2)>.eye-iris{
+    bottom:20px;
+    left:10px;
+}
+
+.nose-container{
+    background-color: salmon;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    top:260px;
+    border:10px solid black;
+}
+
+.hole{
+    width:20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+.cir{
+    position:absolute;
+    width:35px;
+    height:40px;
+    background:black;
+    border-radius: 50%;
+    bottom:5px;
+}
+
+.ears-container {
+    display: flex;
+    justify-content:top;
+    top:5px;
+    left: 0px;
+    gap: 180px;
+}
+
+.ear{
+    width:150px;
+    height:150px;
+    background-color: pink;
+    border-radius: 50%;
+    position: relative;
+    border:10px solid black;
+    z-index: -1;
+}
+
+.head::after{
+    content: '';
+    position: absolute;
+    width:90px;
+    top:15px;
+    left:10px;
+    height:140px;
+    background-color: pink;
+    border-radius: 50%;
+    z-index: 10;
+}
+.head::before{
+    content: '';
+    position: absolute;
+    width:90px;
+    top:15px;
+    right:10px;
+    height:140px;
+    background-color: pink;
+    border-radius: 50%;
+    z-index: 10;
+}
+    
